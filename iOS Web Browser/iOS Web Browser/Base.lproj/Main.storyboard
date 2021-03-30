@@ -33,6 +33,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Forward"/>
+                                <connections>
+                                    <action selector="onForwardButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7F1-UV-kFo"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RY7-As-jWS">
                                 <rect key="frame" x="70" y="44" width="246" height="34"/>
@@ -49,6 +52,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="onBackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E6N-Zr-iWW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
