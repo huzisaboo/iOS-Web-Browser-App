@@ -12,42 +12,56 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_Web_Browser" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaD-Bn-mXK">
-                                <rect key="frame" x="0.0" y="99" width="414" height="797"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <wkWebView contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="kaD-Bn-mXK">
+                                <rect key="frame" x="0.0" y="91" width="415" height="805"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ad3-qJ-sWS">
-                                <rect key="frame" x="26" y="61" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ea7-m8-dIq">
-                                <rect key="frame" x="343" y="61" width="56" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ea7-m8-dIq">
+                                <rect key="frame" x="324" y="44" width="70" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="ILK-KJ-poh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Forward"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ad3-qJ-sWS">
+                                <rect key="frame" x="20" y="44" width="42" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="34" id="zJR-JB-rWx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Back"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kaD-Bn-mXK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="0yy-1e-Kkd"/>
-                            <constraint firstItem="kaD-Bn-mXK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="Bai-wy-nUP"/>
-                            <constraint firstItem="kaD-Bn-mXK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QjS-KE-fW4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kaD-Bn-mXK" secondAttribute="trailing" id="YVV-pm-mNv"/>
+                            <constraint firstItem="Ad3-qJ-sWS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="B6n-um-rWS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ea7-m8-dIq" secondAttribute="trailing" constant="20" id="Kgu-ni-1BV"/>
+                            <constraint firstItem="Ad3-qJ-sWS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UwT-va-V8a"/>
+                            <constraint firstItem="Ea7-m8-dIq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ad3-qJ-sWS" secondAttribute="trailing" constant="8" symbolic="YES" id="ag7-Hq-Sa7"/>
+                            <constraint firstItem="Ad3-qJ-sWS" firstAttribute="baseline" secondItem="Ea7-m8-dIq" secondAttribute="baseline" id="ulY-S0-e3c"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="Ad3-qJ-sWS" id="TUc-NW-RYE"/>
+                        <outlet property="forwardButton" destination="Ea7-m8-dIq" id="VJB-m4-0zG"/>
+                        <outlet property="webView" destination="kaD-Bn-mXK" id="LQ0-tY-EPr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13.043478260869566" y="88.392857142857139"/>
+            <point key="canvasLocation" x="-400.00000000000006" y="-200.22321428571428"/>
         </scene>
     </scenes>
     <resources>

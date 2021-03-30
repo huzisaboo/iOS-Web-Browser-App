@@ -24,6 +24,7 @@
 		477D7C702612BF950005DF46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		477D7C732612BF950005DF46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		477D7C752612BF950005DF46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		477D7C7E2612C4FF0005DF46 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +43,7 @@
 			children = (
 				477D7C662612BF940005DF46 /* iOS Web Browser */,
 				477D7C652612BF940005DF46 /* Products */,
+				477D7C7D2612C4FE0005DF46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +67,14 @@
 				477D7C752612BF950005DF46 /* Info.plist */,
 			);
 			path = "iOS Web Browser";
+			sourceTree = "<group>";
+		};
+		477D7C7D2612C4FE0005DF46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				477D7C7E2612C4FF0005DF46 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
