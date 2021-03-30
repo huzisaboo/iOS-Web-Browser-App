@@ -34,6 +34,14 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Forward"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RY7-As-jWS">
+                                <rect key="frame" x="70" y="44" width="246" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Y8v-8B-06P"/>
+                                </connections>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ad3-qJ-sWS">
                                 <rect key="frame" x="20" y="44" width="42" height="34"/>
                                 <constraints>
@@ -48,14 +56,18 @@
                         <constraints>
                             <constraint firstItem="Ad3-qJ-sWS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="B6n-um-rWS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ea7-m8-dIq" secondAttribute="trailing" constant="20" id="Kgu-ni-1BV"/>
+                            <constraint firstItem="RY7-As-jWS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Req-S8-UNS"/>
                             <constraint firstItem="Ad3-qJ-sWS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UwT-va-V8a"/>
                             <constraint firstItem="Ea7-m8-dIq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ad3-qJ-sWS" secondAttribute="trailing" constant="8" symbolic="YES" id="ag7-Hq-Sa7"/>
+                            <constraint firstItem="Ea7-m8-dIq" firstAttribute="leading" secondItem="RY7-As-jWS" secondAttribute="trailing" constant="8" symbolic="YES" id="dkX-pk-Nbd"/>
+                            <constraint firstItem="RY7-As-jWS" firstAttribute="leading" secondItem="Ad3-qJ-sWS" secondAttribute="trailing" constant="8" symbolic="YES" id="njG-2N-kqB"/>
                             <constraint firstItem="Ad3-qJ-sWS" firstAttribute="baseline" secondItem="Ea7-m8-dIq" secondAttribute="baseline" id="ulY-S0-e3c"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="Ad3-qJ-sWS" id="TUc-NW-RYE"/>
                         <outlet property="forwardButton" destination="Ea7-m8-dIq" id="VJB-m4-0zG"/>
+                        <outlet property="urltextField" destination="RY7-As-jWS" id="VAo-fA-4oY"/>
                         <outlet property="webView" destination="kaD-Bn-mXK" id="LQ0-tY-EPr"/>
                     </connections>
                 </viewController>
